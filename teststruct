@@ -1,0 +1,27 @@
+
+全局使用的结构体：
+struct 
+
+
+设备列表结构体实例是哈希表（zigbee_dev_table）里的值，key是nwk_addr值
+struct zigbee_dev_st{
+  cJSON *ieee,
+  cJSON *nwk_addr,
+  cJSON *online,
+  cJSON *status,
+  cJSON *eps,
+  int ep_count,
+  jwHashTable * ep_table
+} 
+设备ep结构体实例是哈希表（ep_table）里的值，key是ep值，
+struct eps_st{
+  cJSON *profile_id,
+  cJSON *device_id,
+  cJSON *zone_type,
+  cJSON *ep,
+  cJSON *ep_name,
+  cJSON *rid,
+  cJSON *arm
+}  
+
+
